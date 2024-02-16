@@ -138,7 +138,7 @@ def dump_data(file_content, save_file=False):
                     rows = list(reader)
 
             # Prepare new data entry
-            pdf_name = extracted_date_time.strftime(FILE_NAME_FORMAT) + ".pdf"
+            pdf_name = extracted_date_time.strftime(FILE_NAME_FORMAT) + "_KH.pdf"
             pdf_file_link = f"https://github.com/sahilgupta/sbi_forex_rates/blob/main/pdf_files/{str(extracted_date_time.year)}/{str(extracted_date_time.month)}/{pdf_name}"
             new_data = dict(
                 zip(headers, [formatted_date_time, pdf_file_link] + rates_list)
